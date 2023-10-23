@@ -328,51 +328,51 @@
 
     ```html
     <!DOCTYPE html>
-<html>
-<head>
-    <title>Validasi Form</title>
-</head>
-<body>
+    <html>
+    <head>
+        <title>Validasi Form</title>
+    </head>
+    <body>
 
-<h1>Form Validasi</h1>
+    <h1>Form Validasi</h1>
 
-<form id="myForm" onsubmit="return validateForm()">
-    <label for="nama">Nama:</label>
-    <input type="text" id="nama" name="nama"><br><br>
+    <form id="myForm" onsubmit="return validateForm()">
+        <label for="nama">Nama:</label>
+        <input type="text" id="nama" name="nama"><br><br>
 
-    <label for="email">Email:</label>
-    <input type="text" id="email" name="email"><br><br>
+        <label for="email">Email:</label>
+        <input type="text" id="email" name="email"><br><br>
 
-    <input type="submit" value="Submit">
-</form>
+        <input type="submit" value="Submit">
+    </form>
 
-<script>
-function validateForm() {
-    var nama = document.getElementById("nama").value;
-    var email = document.getElementById("email").value;
-    var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+    <script>
+    function validateForm() {
+        var nama = document.getElementById("nama").value;
+        var email = document.getElementById("email").value;
+        var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
 
-    if (nama == "") {
-        alert("Nama tidak boleh kosong.");
-        return false;
+        if (nama == "") {
+            alert("Nama tidak boleh kosong.");
+            return false;
+        }
+
+        if (email == "") {
+            alert("Email tidak boleh kosong.");
+            return false;
+        }
+
+        if (!email.match(emailPattern)) {
+            alert("Email tidak valid.");
+            return false;
+        }
+
+        return true;
     }
+    </script>
 
-    if (email == "") {
-        alert("Email tidak boleh kosong.");
-        return false;
-    }
-
-    if (!email.match(emailPattern)) {
-        alert("Email tidak valid.");
-        return false;
-    }
-
-    return true;
-}
-</script>
-
-</body>
-</html>
+    </body>
+    </html>
 
     ```
     ![img](gambar/16.png) <br>
